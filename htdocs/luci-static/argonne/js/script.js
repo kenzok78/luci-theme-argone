@@ -5,7 +5,7 @@
  *      Copyright 2019 Jerrykuku <jerrykuku@qq.com>
  *
  *  Have a bug? Please create an issue here on GitHub!
- *      https://github.com/kenzok78/luci-theme-argonne/issues
+ *      https://github.com/kenzok78/luci-theme-argonnene/issues
  *
  *  luci-theme-bootstrap:
  *      Copyright 2008 Steven Barth <steven@midlink.org>

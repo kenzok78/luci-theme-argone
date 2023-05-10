@@ -1,4 +1,4 @@
-name: bulid 2 package
+name: bulid argone
 
 on: 
   workflow_dispatch:

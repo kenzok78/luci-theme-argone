@@ -23,9 +23,9 @@ jobs:
           fetch-depth: 0
 
       - name: Build
-        uses: immortalwrt/gh-action-sdk@v4.1
+        uses: sbwml/openwrt-gh-action-sdk@go1.20
         env:
-          ARCH: ${{ matrix.arch }}-${{ env.BRANCH }}
+          ARCH: ${{ matrix.arch }}-openwrt-22.03
           FEEDNAME: packages_ci
           PACKAGES: luci-theme-argone
           NO_REFRESH_CHECK: true

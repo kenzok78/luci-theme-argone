@@ -27,7 +27,7 @@ jobs:
         env:
           ARCH: ${{ matrix.arch }}-${{ env.BRANCH }}
           FEEDNAME: packages_ci
-          PACKAGES: luci-app-bypass luci-app-passwall luci-app-passwall2 luci-app-ssr-plus
+          PACKAGES: luci-theme-argone
           NO_REFRESH_CHECK: true
 
       - name: Upload artifacts

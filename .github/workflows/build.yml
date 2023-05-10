@@ -1,3 +1,5 @@
+name: bulid 2 package
+
 on: 
   workflow_dispatch:
     inputs:
@@ -7,6 +9,8 @@ on:
         type: choice
         options:
         - X86_64
+        - aarch64_cortex-a53
+          
 env:
   PKG_NAME: luci-theme-argone
   

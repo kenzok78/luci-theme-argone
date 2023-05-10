@@ -1,0 +1,52 @@
+name: bulid luci
+
+on:
+ workflow_dispatch:
+  push:
+    tags:
+      - v.**
+
+jobs:
+  build:
+    name: Build ${{ matrix.arch }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        arch:
+          - aarch64_cortex-a53
+          - x86_64
+
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        uses: sbwml/openwrt-gh-action-sdk@go1.20
+        env:
+          ARCH: ${{ matrix.arch }}-openwrt-22.03
+          FEEDNAME: packages_ci
+          PACKAGES: luci-theme-argone
+          NO_REFRESH_CHECK: true
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3.1.2
+        with:
+          name: ${{ matrix.arch }}
+          path: bin/packages/${{ matrix.arch }}/packages_ci/*.ipk
+
+      - name: Zip ipk packages
+        run: |
+          zip -r bin/packages/${{ matrix.arch }}/packages_ci/${{ matrix.arch }}_packages.zip bin/packages/${{ matrix.arch }}/packages_ci/*.ipk
+          echo -e "**文件说明** 🎈:\n" >> release.txt
+          
+      - name: Create Release zip
+        uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.ACCESS_TOKEN }}
+          artifacts: "bin/packages/${{ matrix.arch }}/packages_ci/${{ matrix.arch }}_packages.zip,bin/packages/${{ matrix.arch }}/packages_ci/*.ipk"
+          allowUpdates: true
+          replacesArtifacts: true
+          bodyFile: "release.txt"
+          tag: v1.1.${{ github.run_number }}_${{ matrix.arch }}

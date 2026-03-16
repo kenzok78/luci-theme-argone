@@ -187,7 +187,7 @@ const SlideAnimations = {
 };
 
 /**
- * Argon Theme Menu Module
+ * Argone Theme Menu Module
  * Handles rendering and interaction of the main navigation menu and sidebar
  */
 return baseclass.extend({

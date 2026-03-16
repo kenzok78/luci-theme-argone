@@ -75,8 +75,8 @@
 }
 /* Icon Font */
 @font-face {
-  font-family: 'argon';
-  src: url('../fonts/argon.woff2') format('woff2'), url('../fonts/argon.woff') format('woff');
+  font-family: 'argone';
+  src: url('../fonts/argone.woff2') format('woff2'), url('../fonts/argone.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -777,7 +777,7 @@ select[multiple="multiple"] {
   margin-bottom: 1.25rem;
 }
 .login-page .login-container .login-form .form-login .input-group::before {
-  font-family: 'argon' !important;
+  font-family: 'argone' !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -950,7 +950,7 @@ select[multiple="multiple"] {
   position: absolute;
   left: 0.8rem;
   padding-top: 3px;
-  font-family: 'argon' !important;
+  font-family: 'argone' !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1081,7 +1081,7 @@ select[multiple="multiple"] {
   position: absolute;
   left: 0.8rem;
   padding-top: 3px;
-  font-family: 'argon' !important;
+  font-family: 'argone' !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -1097,7 +1097,7 @@ select[multiple="multiple"] {
   position: absolute;
   right: 0.5rem;
   top: 0.8rem;
-  font-family: 'argon' !important;
+  font-family: 'argone' !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -3605,7 +3605,7 @@ pre.command-output {
 }
 .cbi-section.fade-in .cbi-title > div:last-child span:after {
   transition: all 0.3s;
-  font-family: 'argon' !important;
+  font-family: 'argone' !important;
   content: '\e90f';
   font-size: 1.1rem;
   padding: 0.8755rem 0;
@@ -4200,7 +4200,7 @@ div[style*="display:grid;grid-template-columns:repeat"] .ifacebox .ifacebox-body
     display: inline-block !important;
   }
   .showSide::before {
-    font-family: 'argon' !important;
+    font-family: 'argone' !important;
     font-style: normal !important;
     font-weight: normal !important;
     font-variant: normal !important;
